@@ -2064,3 +2064,19 @@ helpers.identity = helper("7.17.0")`
     return x;
   }
 `;
+
+helpers.currying = helper("7.6.0")`
+  export default function _currying(fn) {
+    const numParamsRequired = fn.length;
+    function curryFactory(params) {
+      return function (...args) {
+        const newParams = params.concat(args);
+        if (newParams.length >= numParamsRequired) {
+          return fn(...newParams);
+        }
+        return curryFactory(newParams);
+      }
+    }
+    return curryFactory([]);
+  }
+`;

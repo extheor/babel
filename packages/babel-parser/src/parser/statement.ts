@@ -1356,7 +1356,12 @@ export default abstract class StatementParser extends ExpressionParser {
         at: this.state.startLoc,
       });
     }
+
+    // 55是怎么算出来的？
+    // 通过 src/parse/statement.ts 文件中此位置代码可以知道
     node.generator = this.eat(tt.star);
+    // 为函数添加curry属性并吞掉@@
+    node.curry = this.eat(tt.doubleAt);
 
     if (isStatement) {
       node.id = this.parseFunctionId(requireId);

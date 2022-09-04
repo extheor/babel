@@ -1,0 +1,20 @@
+{
+  "name": "@babel/plugin-transform-curry-function",
+  "packageManager": "yarn@3.1.1",
+  "description": "Babel plugin for curry function",
+  "main": "lib/index.js",
+  "keywords": [
+    "babel-plugin"
+  ],
+  "dependencies": {
+    "@babel/helper-plugin-utils": "workspace:^"
+  },
+  "peerDependencies": {
+    "@babel/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@babel/core": "workspace:^",
+    "@babel/helper-plugin-test-runner": "workspace:^"
+  },
+  "type": "commonjs"
+}

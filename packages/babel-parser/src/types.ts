@@ -198,6 +198,8 @@ export interface BodilessFunctionOrMethodBase extends HasDecorators {
   id: Identifier | undefined | null;
   params: Array<Pattern | TSParameterProperty>;
   generator: boolean;
+  // TODO: 自定义@@函数支持
+  curry: boolean;
   async: boolean;
   // TODO: All not in spec
   expression: boolean;

@@ -102,6 +102,7 @@ const tokenBeforeExprs: boolean[] = [];
 const tokenStartsExprs: boolean[] = [];
 const tokenPrefixes: boolean[] = [];
 
+// 每调用一次 createToken 就将 tokenTypeCounter 加1并返回
 function createToken(name: string, options: TokenOptions = {}): TokenType {
   ++tokenTypeCounter;
   tokenLabels.push(name);

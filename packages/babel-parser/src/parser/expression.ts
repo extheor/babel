@@ -2836,6 +2836,8 @@ export default abstract class ExpressionParser extends LValParser {
     if (tokenIsKeywordOrIdentifier(type)) {
       name = this.state.value;
     } else {
+      console.log("token1: ", this.state.value);
+      console.log("token2: ", this.lookahead().value);
       throw this.unexpected();
     }
 
