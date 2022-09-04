@@ -8,7 +8,7 @@ export default declare(api => {
     name: "transform-literals",
 
     visitor: {
-      FunctionDeclaration (path) {
+      FunctionDeclaration(path) {
         if (path.get("curry").node) {
           // const foo = curry(function () { ... });
           const functionName = path.get("id.name").node;
