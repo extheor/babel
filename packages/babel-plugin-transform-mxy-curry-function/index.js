@@ -1,11 +1,17 @@
-import { declare } from "@babel/helper-plugin-utils";
-import { types as t } from "@babel/core";
+const { declare } = require("@babel/helper-plugin-utils");
+const { types: t } = require("@babel/core");
+const customParser = require("../babel-parser/lib/index.js");
 
-export default declare(api => {
+module.exports = declare(api => {
   api.assertVersion(7);
 
   return {
-    name: "transform-literals",
+    name: "transform-curry-function",
+
+    // 使用修改过(自定义)的 babel-parser 解析代码
+    parserOverride(code, opts) {
+      return customParser.parse(code, opts);
+    },
 
     visitor: {
       FunctionDeclaration(path) {
@@ -21,9 +27,9 @@ export default declare(api => {
                 t.identifier(functionName),
                 t.callExpression(this.addHelper("currying"), [
                   t.toExpression(path.node),
-                ]),
+                ])
               ),
-            ]),
+            ])
           );
 
           // hoist it
