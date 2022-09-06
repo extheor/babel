@@ -1,8 +1,8 @@
-import { declare } from "@babel/helper-plugin-utils";
-import { types as t } from "@babel/core";
-import customParser from "../babel-parser/lib/index.js.js";
+const { declare } = require("@babel/helper-plugin-utils");
+const { types: t } = require("@babel/core");
+const customParser = require("./custom-parser");
 
-export default declare(api => {
+module.exports = declare(api => {
   api.assertVersion(7);
 
   return {
@@ -21,16 +21,41 @@ export default declare(api => {
           path.node.id = undefined;
           path.node.curry = false;
 
-          path.replaceWith(
-            t.variableDeclaration("const", [
-              t.variableDeclarator(
-                t.identifier(functionName),
-                t.callExpression(this.addHelper("currying"), [
-                  t.toExpression(path.node),
-                ]),
-              ),
-            ]),
-          );
+          const curryCode = `
+            const foo = currying(function (a, b, c) {
+              return a + b + c;
+            });
+
+            function currying(fn) {
+              const numParamsRequired = fn.length;
+              function curryFactory(params) {
+                return function (...args) {
+                  const newParams = params.concat(args);
+                  if (newParams.length >= numParamsRequired) {
+                    return fn(...newParams);
+                  }
+                  return curryFactory(newParams);
+                }
+              }
+              return curryFactory([]);
+            }
+          `;
+
+          const curryAst = customParser.parse(curryCode);
+          // console.log(JSON.stringify(curryAst));
+
+          // path.replaceWith(
+          //   t.variableDeclaration("const", [
+          //     t.variableDeclarator(
+          //       t.identifier(functionName),
+          //       t.callExpression(this.addHelper("currying"), [
+          //         t.toExpression(path.node),
+          //       ])
+          //     ),
+          //   ])
+          // );
+
+          path.replaceWith(curryAst);
 
           // hoist it
           const node = path.node;

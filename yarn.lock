@@ -2714,19 +2714,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@babel/plugin-transform-mxy-curry-function@workspace:packages/babel-plugin-transform-mxy-curry-function":
-  version: 0.0.0-use.local
-  resolution: "@babel/plugin-transform-mxy-curry-function@workspace:packages/babel-plugin-transform-mxy-curry-function"
-  dependencies:
-    "@babel/core": "workspace:^"
-    "@babel/helper-plugin-test-runner": "workspace:^"
-    "@babel/helper-plugin-utils": "workspace:^"
-    "@babel/node": "workspace:^"
-  peerDependencies:
-    "@babel/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
 "@babel/plugin-transform-named-capturing-groups-regex@npm:^7.18.6":
   version: 7.18.6
   resolution: "@babel/plugin-transform-named-capturing-groups-regex@npm:7.18.6"
@@ -5882,6 +5869,33 @@ __metadata:
   checksum: cc693340ed59aff42dadc2bb6a1e7496dce5516e3b712646f9e713782cc35171ad9229acaaa461533b64676031073fd7b4ba97df7b508d407ef04bbddab0aa3e
   languageName: node
   linkType: hard
+
+"babel-plugin-transform-mxy-curry-function-test@workspace:packages/babel-plugin-transform-mxy-curry-function-test":
+  version: 0.0.0-use.local
+  resolution: "babel-plugin-transform-mxy-curry-function-test@workspace:packages/babel-plugin-transform-mxy-curry-function-test"
+  dependencies:
+    "@babel/core": "workspace:^"
+    "@babel/helper-plugin-test-runner": "workspace:^"
+    "@babel/helper-plugin-utils": "workspace:^"
+    "@babel/helpers": "workspace:^"
+    "@babel/node": "workspace:^"
+  peerDependencies:
+    "@babel/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"babel-plugin-transform-mxy-curry-function@workspace:packages/babel-plugin-transform-mxy-curry-function":
+  version: 0.0.0-use.local
+  resolution: "babel-plugin-transform-mxy-curry-function@workspace:packages/babel-plugin-transform-mxy-curry-function"
+  dependencies:
+    "@babel/core": "workspace:^"
+    "@babel/helper-plugin-test-runner": "workspace:^"
+    "@babel/helper-plugin-utils": "workspace:^"
+    "@babel/node": "workspace:^"
+  peerDependencies:
+    "@babel/core": "workspace:^"
+  languageName: unknown
+  linkType: soft
 
 "babel-preset-current-node-syntax@npm:^1.0.0":
   version: 1.0.1
