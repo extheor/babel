@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-mxy-curry-function",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "yarn@3.1.1",
   "description": "Babel plugin for curry function",
   "main": "lib/index.js",
@@ -20,6 +20,6 @@
   },
   "type": "commonjs",
   "scripts": {
-    "start": "babel-node test2.js"
+    "start": "babel-node example.js"
   }
 }

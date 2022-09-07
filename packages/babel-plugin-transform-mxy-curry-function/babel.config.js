@@ -9,5 +9,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: ["./index.js"], // 使用自定义插件
+  plugins: ["./lib/index.js"], // 使用自定义插件
 };

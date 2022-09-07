@@ -5877,7 +5877,6 @@ __metadata:
     "@babel/core": "workspace:^"
     "@babel/helper-plugin-test-runner": "workspace:^"
     "@babel/helper-plugin-utils": "workspace:^"
-    "@babel/helpers": "workspace:^"
     "@babel/node": "workspace:^"
   peerDependencies:
     "@babel/core": "workspace:^"
