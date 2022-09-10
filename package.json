@@ -97,7 +97,9 @@
     "yarn": ">=1.4.0"
   },
   "lint-staged": {
-    "*.{js,cjs,mjs,ts}": []
+    "*.{js,cjs,mjs,ts}": [
+      
+    ]
   },
   "dependenciesMeta": {
     "core-js": {
