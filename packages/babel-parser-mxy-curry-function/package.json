@@ -1,0 +1,75 @@
+{
+  "name": "babel-parser-mxy-curry-function",
+  "version": "1.0.1",
+  "description": "A JavaScript parser curry",
+  "author": "mxy_dream",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "babel",
+    "javascript",
+    "parser",
+    "tc39",
+    "ecmascript",
+    "@babel/parser"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-parser"
+  },
+  "main": "./lib/index.js",
+  "types": "./typings/babel-parser.d.ts",
+  "files": [
+    "bin",
+    "lib",
+    "typings",
+    "index.cjs"
+  ],
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "dependencies": {
+    "charcodes": "^0.2.0"
+  },
+  "devDependencies": {
+    "@babel/code-frame": "workspace:^",
+    "@babel/helper-check-duplicate-nodes": "workspace:^",
+    "@babel/helper-fixtures": "workspace:^",
+    "@babel/helper-string-parser": "workspace:^",
+    "@babel/helper-validator-identifier": "workspace:^",
+    "charcodes": "^0.2.0"
+  },
+  "bin": "./bin/babel-parser.js",
+  "conditions": {
+    "BABEL_8_BREAKING": [
+      null,
+      {
+        "exports": null
+      }
+    ],
+    "USE_ESM": [
+      {
+        "type": "module",
+        "exports": {
+          ".": {
+            "require": "./lib/index.cjs",
+            "default": "./lib/index.js"
+          },
+          "./package.json": "./package.json"
+        }
+      },
+      null
+    ]
+  },
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "type": "commonjs"
+}

@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-mxy-curry-function",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "packageManager": "yarn@3.1.1",
   "description": "Babel plugin for curry function",
   "main": "lib/index.js",
@@ -8,18 +8,8 @@
     "babel-plugin"
   ],
   "dependencies": {
-    "@babel/helper-plugin-utils": "workspace:^"
+    "@babel/helper-plugin-utils": "workspace:^",
+    "babel-parser-mxy-curry-function": "workspace:^"
   },
-  "peerDependencies": {
-    "@babel/core": "workspace:^"
-  },
-  "devDependencies": {
-    "@babel/core": "workspace:^",
-    "@babel/helper-plugin-test-runner": "workspace:^",
-    "@babel/node": "workspace:^"
-  },
-  "type": "commonjs",
-  "scripts": {
-    "start": "babel-node example.js"
-  }
+  "type": "commonjs"
 }

@@ -1,6 +1,6 @@
 const { declare } = require("@babel/helper-plugin-utils");
 // const { types: t } = require("@babel/core");
-const { parse } = require("../lib/custom-parser");
+const { parse } = require("babel-parser-mxy-curry-function");
 
 module.exports = declare(api => {
   api.assertVersion(7);

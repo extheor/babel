@@ -1069,7 +1069,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@babel/node@workspace:^, @babel/node@workspace:packages/babel-node":
+"@babel/node@workspace:packages/babel-node":
   version: 0.0.0-use.local
   resolution: "@babel/node@workspace:packages/babel-node"
   dependencies:
@@ -5777,6 +5777,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-parser-mxy-curry-function@workspace:packages/babel-parser-mxy-curry-function":
+  version: 0.0.0-use.local
+  resolution: "babel-parser-mxy-curry-function@workspace:packages/babel-parser-mxy-curry-function"
+  dependencies:
+    "@babel/code-frame": "workspace:^"
+    "@babel/helper-check-duplicate-nodes": "workspace:^"
+    "@babel/helper-fixtures": "workspace:^"
+    "@babel/helper-string-parser": "workspace:^"
+    "@babel/helper-validator-identifier": "workspace:^"
+    charcodes: ^0.2.0
+  bin:
+    babel-parser-mxy-curry-function: ./bin/babel-parser.js
+  languageName: unknown
+  linkType: soft
+
 "babel-plugin-dynamic-import-node@npm:^2.3.3":
   version: 2.3.3
   resolution: "babel-plugin-dynamic-import-node@npm:2.3.3"
@@ -5870,29 +5885,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-transform-mxy-curry-function-test@workspace:packages/babel-plugin-transform-mxy-curry-function-test":
-  version: 0.0.0-use.local
-  resolution: "babel-plugin-transform-mxy-curry-function-test@workspace:packages/babel-plugin-transform-mxy-curry-function-test"
-  dependencies:
-    "@babel/core": "workspace:^"
-    "@babel/helper-plugin-test-runner": "workspace:^"
-    "@babel/helper-plugin-utils": "workspace:^"
-    "@babel/node": "workspace:^"
-  peerDependencies:
-    "@babel/core": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
 "babel-plugin-transform-mxy-curry-function@workspace:packages/babel-plugin-transform-mxy-curry-function":
   version: 0.0.0-use.local
   resolution: "babel-plugin-transform-mxy-curry-function@workspace:packages/babel-plugin-transform-mxy-curry-function"
   dependencies:
-    "@babel/core": "workspace:^"
-    "@babel/helper-plugin-test-runner": "workspace:^"
     "@babel/helper-plugin-utils": "workspace:^"
-    "@babel/node": "workspace:^"
-  peerDependencies:
-    "@babel/core": "workspace:^"
   languageName: unknown
   linkType: soft
 
